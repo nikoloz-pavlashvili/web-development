@@ -1,0 +1,119 @@
+/*
+=============================
+  1. ძირითადი სტილი (Reset & Body)
+=============================
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* ღია ფონი */
+    color: #333; /* მუქი ტექსტი */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/*
+=============================
+  2. ქულების სექცია
+=============================
+*/
+#playerScore, #computerScore {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/*
+=============================
+  3. მოგების/წაგების სტატუსი
+=============================
+*/
+#winner {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* ლურჯი სტანდარტულად */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 15px 0;
+    cursor: default; /* ღილაკია, მაგრამ არ იჭერენ, უბრალოდ სტატუსს აჩვენებს */
+    transition: background-color 0.3s;
+}
+
+/* მაგალითად: თუ JavaScript ცვლის ფერს მოგება/წაგების მიხედვით */
+.win {
+    background-color: #28a745 !important; /* მწვანე მოგებისთვის */
+}
+
+.lose {
+    background-color: #dc3545 !important; /* წითელი წაგებისთვის */
+}
+
+.draw {
+    background-color: #ffc107 !important; /* ყვითელი ფრე-სთვის */
+}
+
+/*
+=============================
+  4. მოთამაშის არჩევანი (Player Move)
+=============================
+*/
+#playerMove {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* დაშორება არჩევანებს შორის */
+    margin-top: 30px;
+}
+
+#playerMove > div {
+    /* კონტეინერი თითოეული არჩევანისთვის (ქვა, ქაღალდი, მაკრატელი) */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 150px; /* ფიქსირებული სიგანე */
+}
+
+#playerMove > div:hover {
+    transform: translateY(-5px); /* აწევა hover-ზე */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*
+=============================
+  5. გამოსახულებები და ტექსტი
+=============================
+*/
+#playerMove img {
+    width: 100px; /* სურათის ზომა */
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+#playerMove h2 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #007bff;
+}
+
+/*
+=============================
+  6. კომპიუტერის არჩევანი
+=============================
+*/
+#compMove {
+    font-size: 1.2em;
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
